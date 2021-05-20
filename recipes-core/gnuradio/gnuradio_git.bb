@@ -219,7 +219,7 @@ python populate_packages_prepend() {
 }
 
 #PV = "3.8.0+git${SRCPV}"
-PV = "3.8.0.0"
+PV = "3.8.3.0"
 
 FILESPATHPKG_prepend = "gnuradio-git:"
 
@@ -238,12 +238,10 @@ S="${WORKDIR}/git"
 
 EXTRA_OECMAKE = "\
                  -DGR_PYTHON_DIR=${PYTHON_SITEPACKAGES_DIR} \
-                 -DENABLE_GR_ATSC=FALSE \
-                 -DENABLE_GR_FCD=OFF \
-                 -DENABLE_GR_WXGUI=OFF \
                  -DENABLE_GR_VIDEO_SDL=OFF \
                  -DENABLE_GR_DTV=OFF \
-                 -DENABLE_SPHINX=OFF -DENABLE_DOXYGEN=OFF \
+                 -DENABLE_SPHINX=OFF \
+                 -DENABLE_DOXYGEN=OFF \
                  -DENABLE_ORC=OFF \
                  -DENABLE_GR_VOCODER=OFF \
                  -DENABLE_INTERNAL_VOLK=OFF \
